@@ -5,9 +5,7 @@ var main=document.querySelector("main");
 var search=document.querySelector(".mainsearch");
 var searchimg=document.querySelector("#search");
 
-search.addEventListener("click",()=>{
-    load(url+search.value+key);
-})
+
 searchimg.addEventListener("click",()=>{
     load(url+search.value+key);
 })
@@ -29,13 +27,15 @@ function display(ele){
                         </div>
                         </div>
                         <div class="overview">
+                        <div class="desc">
+                        ${e['volumeInfo']['description']}
+                        </div>
                         <div class="rowcontainer">
+                        <div>
                         <h3><a href="${e['accessInfo']['pdf']['acsTokenLink']}">pdf</a></h3>
-                        
+                        </div>
                         <div class="rating"><h2><a href="${e['volumeInfo']['previewLink']}">preview</a></h2></div>
-                        </div class="desc">
-                ${e['volumeInfo']['description']}
-            </div>
+                        </div>
         </div> 
         `;
         main.appendChild(a);
@@ -53,5 +53,5 @@ async function load(url){
 //     var url2=url+'sherlock'+key;
 //     load(url2);
 // });
-
-load(url+'sherlock'+key);
+console.log(url+'sherlock&maxResults=20'+key)
+load(url+'sherlock&maxResults=20'+key);
