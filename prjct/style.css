@@ -75,6 +75,7 @@ main{
     flex-wrap: wrap;
 }
 .container{
+    width: 300px;
     position: relative;
     background-color: #4C0033;
     padding: 20px 5px 5px ;
@@ -119,9 +120,27 @@ main{
     margin: 0px 12px;
 }
 
-a{
+.rowcontainer a{
     text-decoration: none;
-    color: aqua;
+    color: rgb(21, 71, 1);
 }
 
-.ro
+.container h2{
+    color: aliceblue;
+    margin: 4px 0px;
+}
+.overview{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.rowcontainer{
+    display: flex;
+    justify-content: space-between;
+    
+    vertical-align: auto;
+}
+
+.desc{
+    margin-top: 40px;
+}
